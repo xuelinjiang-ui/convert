@@ -1,0 +1,5 @@
+D:\Code0904\WpfApp1\AudioConverter.QqWorker\obj\Release\net472\AudioConverter.QqWorker.csproj.AssemblyReference.cache
+D:\Code0904\WpfApp1\AudioConverter.QqWorker\obj\Release\net472\AudioConverter.QqWorker.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code0904\WpfApp1\AudioConverter.QqWorker\obj\Release\net472\AudioConverter.QqWorker.AssemblyInfoInputs.cache
+D:\Code0904\WpfApp1\AudioConverter.QqWorker\obj\Release\net472\AudioConverter.QqWorker.AssemblyInfo.cs
+D:\Code0904\WpfApp1\AudioConverter.QqWorker\obj\Release\net472\AudioConverter.QqWorker.csproj.CoreCompileInputs.cache

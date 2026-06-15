@@ -1,0 +1,78 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net472</TargetFramework>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>12.0</LangVersion>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Tools\ffmpeg.exe" Condition="Exists('Tools\ffmpeg.exe')">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Tools\kgm.mask" Condition="Exists('Tools\kgm.mask')">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QQMusicDecryptRunner\QQMusicDecryptRunner.csproj" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\KugouInfraRunner\KugouInfraRunner.csproj" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Buffers">
+      <HintPath>..\ThirdParty\Compat\System.Buffers.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>..\ThirdParty\Compat\System.Memory.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>..\ThirdParty\Compat\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>..\ThirdParty\Compat\System.Numerics.Vectors.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="CopyQqMusicDecryptRunnerArtifacts" AfterTargets="Build">
+    <ItemGroup>
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Configuration)\net472\QQMusicDecryptRunner.exe" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\QQMusicDecryptRunner.exe" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\QQMusicDecryptRunner.exe')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Configuration)\net472\QQMusicDecryptRunner.exe.config" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Configuration)\net472\QQMusicDecryptRunner.exe.config')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\QQMusicDecryptRunner.exe.config" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\QQMusicDecryptRunner.exe.config')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Configuration)\net472\QQMusicDecryptHook.dll" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\QQMusicDecryptHook.dll" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\QQMusicDecryptHook.dll')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Configuration)\net472\EasyHook.dll" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Configuration)\net472\EasyHook.dll')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\EasyHook.dll" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\EasyHook.dll')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Configuration)\net472\EasyHook*.dll" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Configuration)\net472\EasyHook32.dll')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\EasyHook*.dll" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\EasyHook32.dll')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Configuration)\net472\EasyHook*.exe" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Configuration)\net472\EasyHook32Svc.exe')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\EasyHook*.exe" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\EasyHook32Svc.exe')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Configuration)\net472\EasyLoad*.dll" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Configuration)\net472\EasyLoad32.dll')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\EasyLoad*.dll" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\EasyLoad32.dll')" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(QqMusicDecryptRunnerArtifacts)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="CopyKugouInfraRunnerArtifacts" AfterTargets="Build">
+    <ItemGroup>
+      <KugouInfraRunnerArtifacts Include="..\KugouInfraRunner\bin\$(Configuration)\net472\KugouInfraRunner.exe" />
+      <KugouInfraRunnerArtifacts Include="..\KugouInfraRunner\bin\$(Platform)\$(Configuration)\net472\KugouInfraRunner.exe" Condition="Exists('..\KugouInfraRunner\bin\$(Platform)\$(Configuration)\net472\KugouInfraRunner.exe')" />
+      <KugouInfraRunnerArtifacts Include="..\KugouInfraRunner\bin\$(Configuration)\net472\KugouInfraRunner.exe.config" Condition="Exists('..\KugouInfraRunner\bin\$(Configuration)\net472\KugouInfraRunner.exe.config')" />
+      <KugouInfraRunnerArtifacts Include="..\KugouInfraRunner\bin\$(Platform)\$(Configuration)\net472\KugouInfraRunner.exe.config" Condition="Exists('..\KugouInfraRunner\bin\$(Platform)\$(Configuration)\net472\KugouInfraRunner.exe.config')" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(KugouInfraRunnerArtifacts)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

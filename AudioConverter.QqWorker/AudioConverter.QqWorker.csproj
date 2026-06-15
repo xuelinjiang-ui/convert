@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>12.0</LangVersion>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Nullable>enable</Nullable>
+    <AssemblyName>AudioConverter.QqWorker</AssemblyName>
+    <RootNamespace>AudioConverter.QqWorker</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\WpfApp1\Services\ProcessCompat.cs" Link="Services\ProcessCompat.cs" />
+    <Compile Include="..\WpfApp1\Services\AudioConversionResults.cs" Link="Services\AudioConversionResults.cs" />
+    <Compile Include="..\WpfApp1\Services\FfmpegConverter.cs" Link="Services\FfmpegConverter.cs" />
+    <Compile Include="..\WpfApp1\Services\QqMusicMggDecryptService.cs" Link="Services\QqMusicMggDecryptService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\QQMusicDecryptRunner\QQMusicDecryptRunner.csproj" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\WpfApp1\Tools\ffmpeg.exe" Link="Tools\ffmpeg.exe" Condition="Exists('..\WpfApp1\Tools\ffmpeg.exe')">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="CopyQqMusicDecryptRunnerArtifacts" AfterTargets="Build">
+    <ItemGroup>
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Configuration)\net472\QQMusicDecryptRunner.exe" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\QQMusicDecryptRunner.exe" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\QQMusicDecryptRunner.exe')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Configuration)\net472\QQMusicDecryptRunner.exe.config" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Configuration)\net472\QQMusicDecryptRunner.exe.config')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\QQMusicDecryptRunner.exe.config" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\QQMusicDecryptRunner.exe.config')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Configuration)\net472\QQMusicDecryptHook.dll" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\QQMusicDecryptHook.dll" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\QQMusicDecryptHook.dll')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Configuration)\net472\EasyHook.dll" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Configuration)\net472\EasyHook.dll')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\EasyHook.dll" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\EasyHook.dll')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Configuration)\net472\EasyHook*.dll" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Configuration)\net472\EasyHook32.dll')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\EasyHook*.dll" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\EasyHook32.dll')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Configuration)\net472\EasyHook*.exe" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Configuration)\net472\EasyHook32Svc.exe')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\EasyHook*.exe" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\EasyHook32Svc.exe')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Configuration)\net472\EasyLoad*.dll" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Configuration)\net472\EasyLoad32.dll')" />
+      <QqMusicDecryptRunnerArtifacts Include="..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\EasyLoad*.dll" Condition="Exists('..\QQMusicDecryptRunner\bin\$(Platform)\$(Configuration)\net472\EasyLoad32.dll')" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(QqMusicDecryptRunnerArtifacts)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

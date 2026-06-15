@@ -1,0 +1,17 @@
+D:\Code0904\WpfApp1\QQMusicDecryptHook\bin\Debug\net472\EasyHook32.dll
+D:\Code0904\WpfApp1\QQMusicDecryptHook\bin\Debug\net472\EasyHook32Svc.exe
+D:\Code0904\WpfApp1\QQMusicDecryptHook\bin\Debug\net472\EasyHook64.dll
+D:\Code0904\WpfApp1\QQMusicDecryptHook\bin\Debug\net472\EasyHook64Svc.exe
+D:\Code0904\WpfApp1\QQMusicDecryptHook\bin\Debug\net472\EasyLoad32.dll
+D:\Code0904\WpfApp1\QQMusicDecryptHook\bin\Debug\net472\EasyLoad64.dll
+D:\Code0904\WpfApp1\QQMusicDecryptHook\bin\Debug\net472\QQMusicDecryptHook.dll
+D:\Code0904\WpfApp1\QQMusicDecryptHook\bin\Debug\net472\QQMusicDecryptHook.pdb
+D:\Code0904\WpfApp1\QQMusicDecryptHook\bin\Debug\net472\EasyHook.dll
+D:\Code0904\WpfApp1\QQMusicDecryptHook\obj\Debug\net472\QQMusicDecryptHook.csproj.AssemblyReference.cache
+D:\Code0904\WpfApp1\QQMusicDecryptHook\obj\Debug\net472\QQMusicDecryptHook.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code0904\WpfApp1\QQMusicDecryptHook\obj\Debug\net472\QQMusicDecryptHook.AssemblyInfoInputs.cache
+D:\Code0904\WpfApp1\QQMusicDecryptHook\obj\Debug\net472\QQMusicDecryptHook.AssemblyInfo.cs
+D:\Code0904\WpfApp1\QQMusicDecryptHook\obj\Debug\net472\QQMusicDecryptHook.csproj.CoreCompileInputs.cache
+D:\Code0904\WpfApp1\QQMusicDecryptHook\obj\Debug\net472\QQMusicD.106BE74A.Up2Date
+D:\Code0904\WpfApp1\QQMusicDecryptHook\obj\Debug\net472\QQMusicDecryptHook.dll
+D:\Code0904\WpfApp1\QQMusicDecryptHook\obj\Debug\net472\QQMusicDecryptHook.pdb

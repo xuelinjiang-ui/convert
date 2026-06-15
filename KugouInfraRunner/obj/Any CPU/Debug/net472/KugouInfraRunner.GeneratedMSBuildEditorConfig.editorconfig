@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = KugouInfraRunner
+build_property.ProjectDir = d:\Code0904\WpfApp1\KugouInfraRunner\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

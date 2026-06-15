@@ -1,0 +1,80 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "MusicDecrypto.Library/2.4.1": {
+        "dependencies": {
+          "NativeMemoryArray": "1.2.0",
+          "TagLibSharp": "2.3.0"
+        },
+        "runtime": {
+          "lib/net8.0/libmusicdecrypto.dll": {
+            "assemblyVersion": "2.4.1.0",
+            "fileVersion": "2.4.1.0"
+          }
+        }
+      },
+      "NativeMemoryArray/1.2.0": {
+        "runtime": {
+          "lib/net6.0/NativeMemoryArray.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        }
+      },
+      "NCMDecrypter/1.0.0": {
+        "dependencies": {
+          "TagLibSharp": "2.3.0"
+        },
+        "runtime": {
+          "lib/net8.0/NCMDecrypter.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TagLibSharp/2.3.0": {
+        "runtime": {
+          "lib/netstandard2.0/TagLibSharp.dll": {
+            "assemblyVersion": "2.3.0.0",
+            "fileVersion": "2.3.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MusicDecrypto.Library/2.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0wXy+NsrhlYT+6L/0yeUJChmLVX8Bs4MUpJs5M8dAb/TAfcjU37ZJ4nDe6xS7uR3GmkYQvElGma7FIx/24uWHg==",
+      "path": "musicdecrypto.library/2.4.1",
+      "hashPath": "musicdecrypto.library.2.4.1.nupkg.sha512"
+    },
+    "NativeMemoryArray/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P+T32CnRaXdcEKSxdQrUngqbbfWDPmnStv5V+Ux9/jr8LQ/hObqWfr0rOfj2s4rCeDOYG4MP9x2tM4tk0i3F0A==",
+      "path": "nativememoryarray/1.2.0",
+      "hashPath": "nativememoryarray.1.2.0.nupkg.sha512"
+    },
+    "NCMDecrypter/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fOxCtq93hMACXiypH1voFieoWY1Wq6gOmUtLqFu6JOHmTyCxLQIZatW5u0lQq6Fm7n+y1i5cstKue7yQaiUCbA==",
+      "path": "ncmdecrypter/1.0.0",
+      "hashPath": "ncmdecrypter.1.0.0.nupkg.sha512"
+    },
+    "TagLibSharp/2.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Qo4z6ZjnIfbR3Us1Za5M2vQ97OWZPmODvVmepxZ8XW0UIVLGdO2T63/N3b23kCcyiwuIe0TQvMEQG8wUCCD1mA==",
+      "path": "taglibsharp/2.3.0",
+      "hashPath": "taglibsharp.2.3.0.nupkg.sha512"
+    }
+  }
+}

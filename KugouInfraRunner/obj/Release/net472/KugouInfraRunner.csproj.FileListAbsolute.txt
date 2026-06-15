@@ -1,0 +1,10 @@
+D:\Code0904\WpfApp1\KugouInfraRunner\bin\Release\net472\KugouInfraRunner.exe.config
+D:\Code0904\WpfApp1\KugouInfraRunner\bin\Release\net472\KugouInfraRunner.exe
+D:\Code0904\WpfApp1\KugouInfraRunner\bin\Release\net472\KugouInfraRunner.pdb
+D:\Code0904\WpfApp1\KugouInfraRunner\obj\Release\net472\KugouInfraRunner.csproj.AssemblyReference.cache
+D:\Code0904\WpfApp1\KugouInfraRunner\obj\Release\net472\KugouInfraRunner.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code0904\WpfApp1\KugouInfraRunner\obj\Release\net472\KugouInfraRunner.AssemblyInfoInputs.cache
+D:\Code0904\WpfApp1\KugouInfraRunner\obj\Release\net472\KugouInfraRunner.AssemblyInfo.cs
+D:\Code0904\WpfApp1\KugouInfraRunner\obj\Release\net472\KugouInfraRunner.csproj.CoreCompileInputs.cache
+D:\Code0904\WpfApp1\KugouInfraRunner\obj\Release\net472\KugouInfraRunner.exe
+D:\Code0904\WpfApp1\KugouInfraRunner\obj\Release\net472\KugouInfraRunner.pdb
