@@ -28,3 +28,5 @@ D:\Code0904\WpfApp1\WpfApp1\obj\Debug\net472\WpfApp1.csproj.CoreCompileInputs.ca
 D:\Code0904\WpfApp1\WpfApp1\obj\Debug\net472\WpfApp1.csproj.Up2Date
 D:\Code0904\WpfApp1\WpfApp1\obj\Debug\net472\WpfApp1.exe
 D:\Code0904\WpfApp1\WpfApp1\obj\Debug\net472\WpfApp1.pdb
+D:\Code0904\WpfApp1\WpfApp1\obj\Debug\net472\WpfApp1.exe.config
+D:\Code0904\WpfApp1\WpfApp1\obj\Debug\net472\WpfApp1.sourcelink.json

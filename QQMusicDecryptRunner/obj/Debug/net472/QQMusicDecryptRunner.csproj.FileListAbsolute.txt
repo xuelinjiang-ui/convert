@@ -19,3 +19,4 @@ D:\Code0904\WpfApp1\QQMusicDecryptRunner\obj\Debug\net472\QQMusicD.F1D51E26.Up2D
 D:\Code0904\WpfApp1\QQMusicDecryptRunner\obj\Debug\net472\QQMusicDecryptRunner.exe
 D:\Code0904\WpfApp1\QQMusicDecryptRunner\obj\Debug\net472\QQMusicDecryptRunner.pdb
 D:\Code0904\WpfApp1\QQMusicDecryptRunner\obj\Debug\net472\QQMusicDecryptRunner.exe.config
+D:\Code0904\WpfApp1\QQMusicDecryptRunner\obj\Debug\net472\QQMusicDecryptRunner.sourcelink.json

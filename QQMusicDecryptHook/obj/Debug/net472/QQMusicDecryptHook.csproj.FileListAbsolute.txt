@@ -15,3 +15,4 @@ D:\Code0904\WpfApp1\QQMusicDecryptHook\obj\Debug\net472\QQMusicDecryptHook.cspro
 D:\Code0904\WpfApp1\QQMusicDecryptHook\obj\Debug\net472\QQMusicD.106BE74A.Up2Date
 D:\Code0904\WpfApp1\QQMusicDecryptHook\obj\Debug\net472\QQMusicDecryptHook.dll
 D:\Code0904\WpfApp1\QQMusicDecryptHook\obj\Debug\net472\QQMusicDecryptHook.pdb
+D:\Code0904\WpfApp1\QQMusicDecryptHook\obj\Debug\net472\QQMusicDecryptHook.sourcelink.json
